@@ -11,12 +11,7 @@ function ajaxRequest(getResponce){
     alert(ajax.status + ': ' + ajax.statusText);
   }
   else{
-    try{
-      let jsonData = JSON.parse(ajax.responseText);
-    }
-    catch (error) {
-      alert('Некорректный ответ' + error.message);
-    }
+    let jsonData = JSON.parse(ajax.responseText);
     alert('Что за фигня!)');
     alert('Статус: ' + jsonData.status);
     //setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
