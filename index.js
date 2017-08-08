@@ -18,7 +18,7 @@ function ajaxRequest(getResponce){
       alert('Некорректный ответ' + error.message);
     }
     alert('Статус: ' + jsonData.status[0]);
-    setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
+    //setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
   }
 }
 
