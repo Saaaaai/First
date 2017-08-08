@@ -11,7 +11,7 @@ function MyForm(){
     //}, timeout);
 
     //Проверка работы таймера Progress
-    setTimeout(function(){clearTimeout(progressTimer);}, 5000);
+    setTimeout(function(){}, 5000);
 
     //Получение, валидация и установка данных
     const dataFromForm = getData();
