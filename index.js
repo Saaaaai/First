@@ -5,16 +5,15 @@ function MyForm(){
   function submit(){
     //Включаем ожидание иного статуса
     const jsonData = ajaxRequest('progress');
-    //setResultContainer('resultContainer',jsonData.status,'');
-    alert('Статус: ' + jsonData.status);
-    //const timeout = jsonData.timeout;
+    setResultContainer('resultContainer',jsonData.status,'');
+    const timeout = jsonData.timeout;
 
     //Получение, валидация и установка данных
     const dataFromForm = getData();
     const dataValidation = validate(dataFromForm);
     setData(dataValidation);
 
-    /*if(dataValidation.isValid){
+    if(dataValidation.isValid){
       //Блокируем ввод, если валидация успешна
       submitButton.setAttribute('disabled', 'disabled');
 
@@ -26,7 +25,7 @@ function MyForm(){
       ajaxRequest('error');
       setResultContainer('resultContainer',jsonData.status,jsonData.reason);
       alert('3');
-    }*/
+    }
 
     //AJAX-запрос
     function ajaxRequest(getResponce){
