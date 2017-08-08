@@ -17,6 +17,7 @@ function ajaxRequest(getResponce){
     catch (error) {
       alert('Некорректный ответ' + error.message);
     }
+    alert('Что за фигня!)');
     alert('Статус: ' + jsonData.status[0]);
     //setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
   }
