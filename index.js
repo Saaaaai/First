@@ -24,12 +24,10 @@ function MyForm(){
 
       ajaxRequest('success');
       setResultContainer('resultContainer',jsonData.status,jsonData.status);
-      alert('2');
     }
     else{
       ajaxRequest('error');
       setResultContainer('resultContainer',jsonData.status,jsonData.reason);
-      alert('3');
     }
 
     //AJAX-запрос
