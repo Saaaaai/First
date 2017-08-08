@@ -5,13 +5,8 @@ function MyForm(){
   function submit(){
     //Включаем ожидание иного статуса
     const jsonData = ajaxRequest('progress');
-    const timeout = jsonData.timeout;
-    //const progressTimer = setInterval(function(){
-      setResultContainer('resultContainer','progress','');
-    //}, timeout);
-
-    //Проверка работы таймера Progress
-    //setTimeout(function(){}, 5000);
+    setResultContainer('resultContainer',jsonData.status,'');
+    //const timeout = jsonData.timeout;
 
     //Получение, валидация и установка данных
     const dataFromForm = getData();
@@ -24,10 +19,12 @@ function MyForm(){
 
       ajaxRequest('success');
       setResultContainer('resultContainer',jsonData.status,jsonData.status);
+      alert('2');
     }
     else{
       ajaxRequest('error');
       setResultContainer('resultContainer',jsonData.status,jsonData.reason);
+      alert('3');
     }*/
 
     //AJAX-запрос
