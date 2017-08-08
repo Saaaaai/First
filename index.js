@@ -11,7 +11,14 @@ function ajaxRequest(getResponce){
     alert(ajax.status + ': ' + ajax.statusText);
   }
   else{
-    setResultContainer('resultContainer',ajax.responseText.status,ajax.responseText.status);
+    try{
+      const jsonData = JSON.parse(xhr.responseText);
+    }
+    catch (error) {
+      alert('Некорректный ответ' + error.message);
+    }
+    showPhones(phones);
+    setResultContainer('resultContainer',jsonData.status,jsonData.status);
   }
 }
 
