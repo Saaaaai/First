@@ -6,9 +6,9 @@ function MyForm(){
     //Включаем ожидание иного статуса
     const jsonData = ajaxRequest('progress');
     const timeout = jsonData.timeout;
-    const progressTimer = setInterval(function(){
+    //const progressTimer = setInterval(function(){
       setResultContainer('resultContainer','progress','');
-    }, timeout);
+    //}, timeout);
 
     //Проверка работы таймера Progress
     setTimeout(function(){clearTimeout(progressTimer);}, 5000);
