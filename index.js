@@ -12,7 +12,7 @@ function ajaxRequest(getResponce){
   }
   else{
     let jsonData = JSON.parse(ajax.responseText);
-    setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
+    setResultContainer('resultContainer',jsonData.status,jsonData.status);
   }
 }
 
