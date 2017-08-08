@@ -17,7 +17,7 @@ function ajaxRequest(getResponce){
     catch (error) {
       alert('Некорректный ответ' + error.message);
     }
-    showPhones(phones);
+    alert('Статус: ' + jsonData.status[0]);
     setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
   }
 }
