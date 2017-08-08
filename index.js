@@ -5,8 +5,13 @@ function MyForm(){
   function submit(){
     //Включаем ожидание иного статуса
     const jsonData = ajaxRequest('progress');
-    setResultContainer('resultContainer',jsonData.status,'');
+    const progressTimer = setInterval(function(){
+      setResultContainer('resultContainer','progress','');
+    }, jsonData.timeout);
     const timeout = jsonData.timeout;
+
+    //Проверка работы таймера Progress
+    setTimeout(function(){}, 5000);
 
     //Получение, валидация и установка данных
     const dataFromForm = getData();
