@@ -1,6 +1,6 @@
 'use strict';
 
-ajaxRequest('succsess');
+ajaxRequest('success');
 
 //AJAX-запрос
 function ajaxRequest(getResponce){
