@@ -5,7 +5,7 @@ function MyForm(){
   function submit(){
     //Включаем ожидание иного статуса
     ajaxRequest('progress');
-    setResultContainer('resultContainer',jsonData.status,jsonData.status);
+    setResultContainer('resultContainer',jsonData.status,'');
     alert('1');
     const timeout = jsonData.timeout;
 
