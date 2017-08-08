@@ -12,7 +12,7 @@ function ajaxRequest(getResponce){
   }
   else{
     try{
-      const jsonData = JSON.parse(ajax.responseText);
+      let jsonData = JSON.parse(ajax.responseText);
     }
     catch (error) {
       alert('Некорректный ответ' + error.message);
