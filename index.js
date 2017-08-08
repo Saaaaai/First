@@ -18,7 +18,7 @@ function ajaxRequest(getResponce){
       alert('Некорректный ответ' + error.message);
     }
     showPhones(phones);
-    setResultContainer('resultContainer',jsonData.status,jsonData.status);
+    setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
   }
 }
 
