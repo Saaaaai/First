@@ -11,6 +11,16 @@ function ajaxRequest(getResponce){
     alert(ajax.status + ': ' + ajax.statusText);
   }
   else{
-    alert(ajax.responseText);
+    setResultContainer('resultContainer',ajax.responseText.status,ajax.responseText.status);
   }
+}
+
+//Обновление содержимого ResultContainer
+function setResultContainer(elementId, setClass, setText){
+  const container = document.getElementById(elementId);
+  while (container.firstChild){
+    container.removeChild(container.firstChild);
+  }
+  container.insertAdjacentHTML( 'beforeend', setText);
+  container.className = setClass;
 }
