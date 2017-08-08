@@ -12,9 +12,7 @@ function ajaxRequest(getResponce){
   }
   else{
     let jsonData = JSON.parse(ajax.responseText);
-    alert('Что за фигня!)');
-    alert('Статус: ' + jsonData.status);
-    //setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
+    setResultContainer('resultContainer',jsonData.status[0],jsonData.status[0]);
   }
 }
 
