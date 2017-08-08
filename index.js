@@ -4,7 +4,7 @@ function MyForm(){
 
   function submit(){
     //Включаем ожидание иного статуса
-    ajaxRequest('progress');
+    const jsonData = ajaxRequest('progress');
     //setResultContainer('resultContainer',jsonData.status,'');
     alert('Статус: ' + jsonData.status);
     //const timeout = jsonData.timeout;
@@ -37,7 +37,7 @@ function MyForm(){
         alert(ajax.status + ': ' + ajax.statusText);
       }
       else{
-        const jsonData = JSON.parse(ajax.responseText);
+        return JSON.parse(ajax.responseText);
       }
     }
 
