@@ -18,7 +18,7 @@ function MyForm(){
     const dataValidation = validate(dataFromForm);
     setData(dataValidation);
 
-    if(dataValidation.isValid){
+    /*if(dataValidation.isValid){
       //Блокируем ввод, если валидация успешна
       submitButton.setAttribute('disabled', 'disabled');
 
@@ -28,7 +28,7 @@ function MyForm(){
     else{
       ajaxRequest('error');
       setResultContainer('resultContainer',jsonData.status,jsonData.reason);
-    }
+    }*/
 
     //AJAX-запрос
     function ajaxRequest(getResponce){
