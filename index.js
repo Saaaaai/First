@@ -4,42 +4,43 @@ function MyForm(){
 
   function submit(){
     //Включаем ожидание иного статуса
-    const jsonData = ajaxRequest('progress');
-    //const timeout = jsonData.timeout;
-    //const progressTimer = setInterval(function(){
-      setResultContainer('resultContainer','progress','progress');
-    //}, timeout);
-
-    //Проверка работы таймера Progress
-    //setTimeout(function(){}, 5000);
-
-    //Получение, валидация и установка данных
-    const dataFromForm = getData();
-    const dataValidation = validate(dataFromForm);
-    setData(dataValidation);
-
-    /*if(dataValidation.isValid){
-      //Блокируем ввод, если валидация успешна
-      submitButton.setAttribute('disabled', 'disabled');
-
-      ajaxRequest('success');
+    let jsonData = ajaxRequest('progress');
+    const timeout = jsonData.timeout;
+    const progressTimer = setInterval(function(){
       setResultContainer('resultContainer',jsonData.status,jsonData.status);
-    }
-    else{
-      ajaxRequest('error');
-      setResultContainer('resultContainer',jsonData.status,jsonData.reason);
-    }*/
+    }, timeout);
+
+    setTimeout(function(){
+      clearInterval(progressTimer);
+
+      //Получение, валидация и установка данных
+      const dataFromForm = getData();
+      const dataValidation = validate(dataFromForm);
+      setData(dataValidation);
+      if(dataValidation.isValid){
+        //Блокируем ввод, если валидация успешна
+        submitButton.setAttribute('disabled', 'disabled');
+        jsonData = ajaxRequest('success');
+        setResultContainer('resultContainer',jsonData.status,jsonData.status);
+      }
+      else{
+        jsonData = ajaxRequest('error');
+        alert(jsonData.status);
+        setResultContainer('resultContainer',jsonData.status,jsonData.reason);
+      }
+    }, timeout * 5);
 
     //AJAX-запрос
     function ajaxRequest(getResponce){
       let ajax = new XMLHttpRequest();
-      ajax.open('GET', './' + getResponce + '.json', false);
+      ajax.open('GET', getResponce + '.json', false);
       ajax.send();
-      if (ajax.status != 200){
-        alert(ajax.status + ': ' + ajax.statusText);
+      if (ajax.readyState == 4 && ajax.status == 200){
+        const responseText = JSON.parse(ajax.responseText);
+        return responseText;
       }
       else{
-        return JSON.parse(ajax.responseText);
+        alert(ajax.status + ': ' + ajax.statusText);
       }
     }
 
