@@ -1,0 +1,53 @@
+{
+  'env': {
+    'es6': true,
+    'node': true
+  },
+    'extends': 'eslint:recommended',
+    'parserOptions': {
+    'sourceType': 'module'
+  },
+  'rules': {
+    'indent': [
+      'error',
+      2
+    ],
+    'no-console': [
+      'error',
+      { allow: ['warn', 'error'] }
+    ],
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'error',
+      'always'
+    ],
+    'arrow-parens': [
+      'error',
+      'always'
+    ],
+    'generator-star-spacing': [
+      'error',
+      'after'
+    ],
+    'yield-star-spacing': [
+      'error',
+      'after'
+    ],
+    'object-shorthand': [
+      'error',
+      'always',
+      { 'avoidQuotes': true }
+    ],
+    'no-var': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'rest-spread-spacing': 'error'
+  }
+}

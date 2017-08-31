@@ -1,0 +1,20 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "testtask",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --config .eslintrc ."
+  },
+  "author": "Saai",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "2st"
+  },
+  "keywords": [
+    "yandex",
+    "nodejs",
+    "school"
+  ]
+}

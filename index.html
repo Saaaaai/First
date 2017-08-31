@@ -3,33 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>Тестовое задание</title>
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css">
     <style>
-      .error{
+      input.error {
         border: 1px solid red;
       }
     </style>
     <script defer src="index.js"></script>
 </head>
 <body>
-	<main>
-		<div class="active">
-      <form id="myForm" method="get" action="">
-        <p>
-          <label>ФИО</label>
-          <input type="text" name="fio" class="" placeholder="enter your name">
-        </p>
-        <p>
-        <label>Email</label>
-        <input type="email" name="email" class="" placeholder="example@address.ru">
-        </p>
-        <p>
-        <label>Телефон</label>
-        <input type="text" name="phone" class="" placeholder="+7(999)999-99-99">
-        </p>
+  <div class="container">
+      <form id="myForm" method="get" action="progress.json">
+        <label>ФИО:
+          <input type="text" name="fio" class="" required placeholder="enter your name">
+        </label>
+        <label>Email:
+          <input type="email" name="email" class="" required placeholder="example@address.ru">
+        </label>
+        <label>Телефон:
+          <input type="text" name="phone" class="" required placeholder="+7(999)999-99-99">
+        </label>
         <input id="submitButton" type="submit" value="кнопка отправки формы"></input>
       </form>
-		</div>
-    <div id="resultContainer"></div>
-	</main>
+      <div id="resultContainer"></div>
+  </div>
 </body>
 </html>

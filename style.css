@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 150px auto;
+  width: 300px;
+}
+
+label {
+  color: #555;
+  display: inline-block;
+  font-size: 14px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+input {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  height: 40px;
+  width: 300px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  line-height: 1.5em;
+  -webkit-appearance: none;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+
+#submitButton {
+  margin: 1.5em 0;
+  width: 330px;
+  background-color: #e0f3e0;
+}
+
+#submitButton[disabled="disabled"] {
+  background-color: #eee;
+}
